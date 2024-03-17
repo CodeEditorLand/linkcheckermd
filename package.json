@@ -1,10 +1,24 @@
 {
-  "activationEvents": [
-    "onLanguage:markdown"
-  ],
+  "name": "LinkCheckMD",
+  "displayName": "HTTP/s and relative link checker",
+  "version": "0.3.0",
+  "description": "Checks Markdown links for the presence of a country-code as you type and flags as a warning. Checks whether HTTP/s links or relative links are reachable when you press Alt+L.",
+  "homepage": "https://github.com/microsoft/linkcheckermd/blob/master/README.md",
   "bugs": {
-    "email": "larryfr@microsoft.com",
-    "url": "https://github.com/microsoft/linkcheckermd/issues"
+    "url": "https://github.com/microsoft/linkcheckermd/issues",
+    "email": "larryfr@microsoft.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/linkcheckermd.git"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "publisher": "blackmist",
+  "main": "./out/extension",
+  "scripts": {
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "vscode:prepublish": "tsc -p ./"
   },
   "contributes": {
     "commands": [
@@ -30,11 +44,13 @@
       }
     ]
   },
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
   "dependencies": {
     "broken-link": "1.0.1",
     "validator": "13.7.0"
   },
-  "description": "Checks Markdown links for the presence of a country-code as you type and flags as a warning. Checks whether HTTP/s links or relative links are reachable when you press Alt+L.",
   "devDependencies": {
     "@types/mocha": "2.2.32",
     "@types/node": "6.0.40",
@@ -42,25 +58,9 @@
     "typescript": "2.0.3",
     "vscode": "1.0.0"
   },
-  "displayName": "HTTP/s and relative link checker",
+  "icon": "images/linkcheckermdicon.png",
   "galleryBanner": {
     "color": "#0000FF",
     "theme": "dark"
-  },
-  "homepage": "https://github.com/microsoft/linkcheckermd/blob/master/README.md",
-  "icon": "images/linkcheckermdicon.png",
-  "license": "SEE LICENSE IN LICENSE.md",
-  "main": "./out/extension",
-  "name": "LinkCheckMD",
-  "publisher": "blackmist",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/microsoft/linkcheckermd.git"
-  },
-  "scripts": {
-    "compile": "tsc -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "vscode:prepublish": "tsc -p ./"
-  },
-  "version": "0.3.0"
+  }
 }
