@@ -3,6 +3,10 @@
   "displayName": "HTTP/s and relative link checker",
   "version": "0.3.0",
   "description": "Checks Markdown links for the presence of a country-code as you type and flags as a warning. Checks whether HTTP/s links or relative links are reachable when you press Alt+L.",
+  "categories": [
+    "Linters",
+    "Other"
+  ],
   "homepage": "https://github.com/microsoft/linkcheckermd/blob/master/README.md",
   "bugs": {
     "url": "https://github.com/microsoft/linkcheckermd/issues",
@@ -28,14 +32,14 @@
       }
     ],
     "configuration": {
+      "title": "LinkCheckMD",
       "properties": {
         "linkcheckmd.enableCountryCodeCheck": {
+          "type": "boolean",
           "default": true,
-          "description": "Enable checking links for hard-coded language identifiers (LNK0001).",
-          "type": "boolean"
+          "description": "Enable checking links for hard-coded language identifiers (LNK0001)."
         }
-      },
-      "title": "LinkCheckMD"
+      }
     },
     "keybindings": [
       {
@@ -48,15 +52,18 @@
     "onLanguage:markdown"
   ],
   "dependencies": {
-    "broken-link": "1.0.1",
-    "validator": "13.7.0"
+    "broken-link": "^1.0.1",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
-    "@types/mocha": "2.2.32",
-    "@types/node": "6.0.40",
-    "mocha": "10.2.0",
-    "typescript": "2.0.3",
-    "vscode": "1.0.0"
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.40",
+    "mocha": "^10.2.0",
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0"
+  },
+  "engines": {
+    "vscode": "0.10.x"
   },
   "icon": "images/linkcheckermdicon.png",
   "galleryBanner": {
