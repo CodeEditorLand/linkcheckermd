@@ -60,14 +60,14 @@
     }
   },
   "devDependencies": {
-    "@types/mocha": "^2.2.32",
-    "@types/node": "^6.0.40",
-    "mocha": "^10.2.0",
-    "typescript": "^2.0.3",
-    "vscode": "^1.0.0"
+    "@types/mocha": "2.2.32",
+    "@types/node": "6.0.40",
+    "mocha": "10.2.0",
+    "typescript": "2.0.3",
+    "vscode": "1.0.0"
   },
   "dependencies": {
-    "broken-link": "^1.0.1",
-    "validator": "^13.7.0"
+    "broken-link": "1.0.1",
+    "validator": "13.7.0"
   }
 }
