@@ -1,14 +1,32 @@
 {
-	"activationEvents": [
-		"onLanguage:markdown"
+	"name": "LinkCheckMD",
+	"displayName": "HTTP/s and relative link checker",
+	"version": "0.0.1",
+	"private": false,
+	"description": "Checks Markdown links for the presence of a country-code as you type and flags as a warning. Checks whether HTTP/s links or relative links are reachable when you press Alt+L.",
+	"keywords": [
+		"land"
 	],
-	"author": {
-		"email": "Land@PlayForm.Cloud",
-		"name": "🌆 — Land —",
-		"url": "HTTPS://Land.PlayForm.Cloud"
-	},
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LinkCheckerMD#readme",
 	"bugs": {
 		"url": "HTTPS://GitHub.Com/CodeEditorLand/LinkCheckerMD/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LinkCheckerMD.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"type": "module",
+	"main": "./out/extension",
+	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
+		"compile": "tsc -watch -p ./",
+		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"contributes": {
 		"commands": [
@@ -34,42 +52,24 @@
 			}
 		]
 	},
+	"activationEvents": [
+		"onLanguage:markdown"
+	],
 	"dependencies": {
 		"broken-link": "1.0.1",
 		"validator": "13.11.0"
 	},
-	"description": "Checks Markdown links for the presence of a country-code as you type and flags as a warning. Checks whether HTTP/s links or relative links are reachable when you press Alt+L.",
 	"devDependencies": {
 		"@playform/build": "0.0.7",
 		"@playform/document": "0.0.6",
 		"@types/node": "20.12.7"
 	},
-	"displayName": "HTTP/s and relative link checker",
-	"galleryBanner": {
-		"color": "#0000FF",
-		"theme": "dark"
-	},
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LinkCheckerMD#readme",
-	"icon": "images/linkcheckermdicon.png",
-	"keywords": [
-		"land"
-	],
-	"license": "SEE LICENSE IN LICENSE",
-	"main": "./out/extension",
-	"name": "LinkCheckMD",
-	"private": false,
 	"publishConfig": {
 		"access": "public"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+HTTPS://github.com/CodeEditorLand/LinkCheckerMD.git"
-	},
-	"scripts": {
-		"Document": "Document 'Source/**/*.ts'",
-		"compile": "tsc -watch -p ./",
-		"prepublishOnly": "Build 'Source/**/*.ts'"
-	},
-	"type": "module",
-	"version": "0.0.1"
+	"icon": "images/linkcheckermdicon.png",
+	"galleryBanner": {
+		"color": "#0000FF",
+		"theme": "dark"
+	}
 }
