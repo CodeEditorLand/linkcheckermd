@@ -56,13 +56,13 @@
 		"onLanguage:markdown"
 	],
 	"dependencies": {
-		"broken-link": "^1.0.1",
-		"validator": "^13.7.0"
+		"broken-link": "1.0.1",
+		"validator": "13.11.0"
 	},
 	"devDependencies": {
 		"@playform/build": "0.0.7",
 		"@playform/document": "0.0.6",
-		"@types/node": "^6.0.40"
+		"@types/node": "20.12.7"
 	},
 	"publishConfig": {
 		"access": "public"
