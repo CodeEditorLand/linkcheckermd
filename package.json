@@ -1,0 +1,75 @@
+{
+	"name": "LinkCheckMD",
+	"displayName": "HTTP/s and relative link checker",
+	"version": "0.0.1",
+	"private": false,
+	"description": "Checks Markdown links for the presence of a country-code as you type and flags as a warning. Checks whether HTTP/s links or relative links are reachable when you press Alt+L.",
+	"keywords": [
+		"land"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LinkCheckerMD#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LinkCheckerMD/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LinkCheckerMD.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"type": "module",
+	"main": "./out/extension",
+	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
+		"compile": "tsc -watch -p ./",
+		"prepublishOnly": "Build 'Source/**/*.ts'"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.generateLinkReport",
+				"title": "Generate a link report"
+			}
+		],
+		"configuration": {
+			"properties": {
+				"linkcheckmd.enableCountryCodeCheck": {
+					"default": true,
+					"description": "Enable checking links for hard-coded language identifiers (LNK0001).",
+					"type": "boolean"
+				}
+			},
+			"title": "LinkCheckMD"
+		},
+		"keybindings": [
+			{
+				"command": "extension.generateLinkReport",
+				"key": "Alt+L"
+			}
+		]
+	},
+	"activationEvents": [
+		"onLanguage:markdown"
+	],
+	"dependencies": {
+		"broken-link": "1.0.1",
+		"validator": "13.11.0"
+	},
+	"devDependencies": {
+		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6",
+		"@types/node": "20.12.7"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"icon": "images/linkcheckermdicon.png",
+	"galleryBanner": {
+		"color": "#0000FF",
+		"theme": "dark"
+	}
+}
