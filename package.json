@@ -34,11 +34,11 @@
 		"onLanguage:markdown"
 	],
 	"dependencies": {
-		"broken-link": "^1.0.1",
-		"validator": "^13.7.0"
+		"broken-link": "1.0.1",
+		"validator": "13.7.0"
 	},
 	"devDependencies": {
-		"@types/node": "^6.0.40"
+		"@types/node": "6.0.40"
 	},
 	"icon": "images/linkcheckermdicon.png",
 	"galleryBanner": {
