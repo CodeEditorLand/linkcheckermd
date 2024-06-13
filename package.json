@@ -1,48 +1,73 @@
 {
-	"activationEvents": [
-		"onLanguage:markdown"
-	],
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.generateLinkReport",
-				"title": "Generate a link report"
-			}
-		],
-		"configuration": {
-			"properties": {
-				"linkcheckmd.enableCountryCodeCheck": {
-					"default": true,
-					"description": "Enable checking links for hard-coded language identifiers (LNK0001).",
-					"type": "boolean"
-				}
-			},
-			"title": "LinkCheckMD"
-		},
-		"keybindings": [
-			{
-				"command": "extension.generateLinkReport",
-				"key": "Alt+L"
-			}
-		]
-	},
-	"dependencies": {
-		"broken-link": "1.0.1",
-		"validator": "13.12.0"
-	},
-	"description": "Checks Markdown links for the presence of a country-code as you type and flags as a warning. Checks whether HTTP/s links or relative links are reachable when you press Alt+L.",
-	"devDependencies": {
-		"@types/node": "20.14.2"
-	},
-	"displayName": "HTTP/s and relative link checker",
-	"galleryBanner": {
-		"color": "#0000FF",
-		"theme": "dark"
-	},
-	"icon": "images/linkcheckermdicon.png",
-	"main": "./out/extension",
-	"name": "LinkCheckMD",
-	"scripts": {
-		"compile": "tsc -watch -p ./"
-	}
+  "name": "LinkCheckMD",
+  "displayName": "HTTP/s and relative link checker",
+  "description": "Checks Markdown links for the presence of a country-code as you type and flags as a warning. Checks whether HTTP/s links or relative links are reachable when you press Alt+L.",
+  "icon": "images/linkcheckermdicon.png",
+  "version": "0.3.0",
+  "publisher": "blackmist",
+  "galleryBanner": {
+    "color": "#0000FF",
+    "theme": "dark"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/microsoft/linkcheckermd/issues",
+    "email": "larryfr@microsoft.com"
+  },
+  "homepage": "https://github.com/microsoft/linkcheckermd/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/linkcheckermd.git"
+  },
+  "categories": [
+    "Linters",
+    "Other"
+  ],
+  "engines": {
+    "vscode": "0.10.x"
+  },
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./out/extension",
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.generateLinkReport",
+        "title": "Generate a link report"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.generateLinkReport",
+        "key": "Alt+L"
+      }
+    ],
+    "configuration": {
+      "title": "LinkCheckMD",
+      "properties": {
+        "linkcheckmd.enableCountryCodeCheck": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable checking links for hard-coded language identifiers (LNK0001)."
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.40",
+    "mocha": "^10.2.0",
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0"
+  },
+  "dependencies": {
+    "broken-link": "^1.0.1",
+    "validator": "^13.7.0"
+  }
 }
