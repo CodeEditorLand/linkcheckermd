@@ -35,10 +35,10 @@
 	],
 	"dependencies": {
 		"broken-link": "1.0.1",
-		"validator": "13.12.0"
+		"validator": "13.7.0"
 	},
 	"devDependencies": {
-		"@types/node": "20.14.11"
+		"@types/node": "6.0.40"
 	},
 	"icon": "images/linkcheckermdicon.png",
 	"galleryBanner": {
