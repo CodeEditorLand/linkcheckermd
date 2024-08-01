@@ -28,11 +28,11 @@
 	},
 	"dependencies": {
 		"broken-link": "1.0.1",
-		"validator": "13.7.0"
+		"validator": "13.12.0"
 	},
 	"description": "Checks Markdown links for the presence of a country-code as you type and flags as a warning. Checks whether HTTP/s links or relative links are reachable when you press Alt+L.",
 	"devDependencies": {
-		"@types/node": "6.0.40"
+		"@types/node": "22.0.2"
 	},
 	"displayName": "HTTP/s and relative link checker",
 	"galleryBanner": {
