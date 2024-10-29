@@ -32,7 +32,7 @@
 	},
 	"description": "Checks Markdown links for the presence of a country-code as you type and flags as a warning. Checks whether HTTP/s links or relative links are reachable when you press Alt+L.",
 	"devDependencies": {
-		"@types/node": "22.8.1"
+		"@types/node": "22.8.2"
 	},
 	"displayName": "HTTP/s and relative link checker",
 	"galleryBanner": {
