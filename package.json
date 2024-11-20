@@ -1,11 +1,7 @@
 {
-	"name": "LinkCheckMD",
-	"displayName": "HTTP/s and relative link checker",
-	"description": "Checks Markdown links for the presence of a country-code as you type and flags as a warning. Checks whether HTTP/s links or relative links are reachable when you press Alt+L.",
-	"main": "./out/extension",
-	"scripts": {
-		"compile": "tsc -watch -p ./"
-	},
+	"activationEvents": [
+		"onLanguage:markdown"
+	],
 	"contributes": {
 		"commands": [
 			{
@@ -30,19 +26,23 @@
 			}
 		]
 	},
-	"activationEvents": [
-		"onLanguage:markdown"
-	],
 	"dependencies": {
 		"broken-link": "1.0.1",
 		"validator": "13.12.0"
 	},
+	"description": "Checks Markdown links for the presence of a country-code as you type and flags as a warning. Checks whether HTTP/s links or relative links are reachable when you press Alt+L.",
 	"devDependencies": {
 		"@types/node": "22.9.1"
 	},
-	"icon": "images/linkcheckermdicon.png",
+	"displayName": "HTTP/s and relative link checker",
 	"galleryBanner": {
 		"color": "#0000FF",
 		"theme": "dark"
+	},
+	"icon": "images/linkcheckermdicon.png",
+	"main": "./out/extension",
+	"name": "LinkCheckMD",
+	"scripts": {
+		"compile": "tsc -watch -p ./"
 	}
 }
