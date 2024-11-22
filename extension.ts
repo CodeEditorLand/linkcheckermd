@@ -211,6 +211,7 @@ function getLinks(document: TextDocument): Promise<Link[]> {
 			let links = lineText.text.match(
 				/\[[^\[]+\]\(([^\)]+(\)[a-zA-Z0-9-]*.\w*\)|\)))|\[[a-zA-z0-9_-]+\]:\s*(\S+)/g,
 			);
+
 			if (links) {
 				// Iterate over the links found on this line
 				for (let i = 0; i < links.length; i++) {
@@ -265,6 +266,7 @@ function hasCountryCode(linkToCheck: string): boolean {
 	let hasCountryCode = linkToCheck.match(
 		/(.com|aka\.ms)\/[a-z]{2}\-[a-z]{2}\//,
 	);
+
 	return hasCountryCode ? true : false;
 }
 
@@ -295,9 +297,13 @@ function createDiagnostic(
 	// Get the location of the text in the document
 	// based on position within the line of text it occurs in
 	let startPos = lineText.text.indexOf(markdownLink);
+
 	let endPos = startPos + markdownLink.length - 1;
+
 	let start = new Position(lineText.lineNumber, startPos);
+
 	let end = new Position(lineText.lineNumber, endPos);
+
 	let range = new Range(start, end);
 	// Create the diagnostic object
 	let diag = new Diagnostic(range, message, severity);
