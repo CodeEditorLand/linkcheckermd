@@ -29,7 +29,9 @@ import fs = require("fs");
 //Interface for links
 interface Link {
 	text: string;
+
 	address: string;
+
 	lineText: TextLine;
 }
 
@@ -233,6 +235,7 @@ function getLinks(document: TextDocument): Promise<Link[]> {
 				}
 			}
 		}
+
 		if (linksToReturn.length > 0) {
 			//Return the populated array, which completes the promise.
 			resolve(linksToReturn);
@@ -258,6 +261,7 @@ function isCountryCodeLink(link: Link): Diagnostic {
 			"LNK0001",
 		);
 	}
+
 	return countryCodeDiag;
 }
 
@@ -307,7 +311,9 @@ function createDiagnostic(
 	let range = new Range(start, end);
 	// Create the diagnostic object
 	let diag = new Diagnostic(range, message, severity);
+
 	diag.code = code;
+
 	diag.source = "linkcheckmd";
 	// Return the diagnostic
 	return diag;
