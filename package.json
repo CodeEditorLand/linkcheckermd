@@ -38,7 +38,7 @@
 		"validator": "13.12.0"
 	},
 	"devDependencies": {
-		"@types/node": "22.10.1"
+		"@types/node": "22.10.5"
 	},
 	"icon": "images/linkcheckermdicon.png",
 	"galleryBanner": {
